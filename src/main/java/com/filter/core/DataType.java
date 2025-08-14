@@ -1,4 +1,4 @@
-package com.filter.cli;
+package com.filter.core;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
