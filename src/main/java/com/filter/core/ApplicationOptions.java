@@ -59,7 +59,7 @@ public class ApplicationOptions {
         }
 
         String separator = options.outputPath.isEmpty() ? "" : File.separator;
-        String fullPath = options.outputPath + separator + options.outputPath;
+        String fullPath = options.outputPath + separator;
 
         if (!fullPath.isEmpty()) {
             File outputDir = new File(fullPath);

@@ -46,18 +46,17 @@ public class Statistics {
     public void longStatistics() {
 
         if (stringStatistics != null) {
-            System.out.println("String statistics");
+            printCentered("String statistics");
             stringStatistics.longStatic();
         }
 
         if (integerStatistics != null) {
-            System.out.println("Integer statistics");
+            printCentered("Integer statistics");
             integerStatistics.longStatic();
         }
 
         if (floatStatistics != null) {
-            System.out.println("┌─────────────────────────────────────────────┐");
-            System.out.printf ("│ %-45s │%n", "Float statistics");
+            printCentered("Float statistics");
 
             floatStatistics.longStatic();
         }
@@ -66,19 +65,29 @@ public class Statistics {
 
     public void shortStatistics() {
         if (stringStatistics != null) {
-            System.out.println("String statistics");
+            printCentered("String statistics");
             stringStatistics.shortStatic();
         }
 
         if (integerStatistics != null) {
-            System.out.println("Integer statistics");
+            printCentered("Integer statistics");
             integerStatistics.shortStatic();
         }
 
         if (floatStatistics != null) {
-            System.out.println("Float statistics");
+            printCentered("Float statistics");
             floatStatistics.shortStatic();
         }
+
+    }
+    private void printCentered(String text) {
+        int width=50;
+        int padding = (width - text.length()) / 2;
+        padding = Math.max(0, padding);
+
+        String format = "%" + (padding + text.length()) + "s%n";
+        System.out.printf(format, "-".repeat(text.length()));
+        System.out.printf(format, text);
 
     }
 }
